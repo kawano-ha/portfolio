@@ -1,38 +1,18 @@
-# ポートフォリオ雛形 README
+```markdown
+# 動きのあるポートフォリオ雛形
 
-このリポジトリは学生向けのシンプルなポートフォリオ静的サイトの雛形です。HTML/CSS/簡単なJS で構成されています。
-
-セットアップ（ローカル）
-1. フォルダにファイルを置く（index.html, styles.css, script.js, projects/）
-2. ブラウザで index.html を開くだけで動きます。
-
-プロジェクト追加手順
-1. projects フォルダに新しい Markdown ファイルを追加（例: projects/project-2.md）。
-2. index.html の projects セクションに project-card をコピーして内容を更新、"詳細を見る" のリンクを新しい .md にするか、別ページに作成してください。
-   - 将来的には static-site-generator（Gatsby, Next.js, Eleventy など）に移すと Markdown を自動変換できます。
-
-公開方法（推奨）
-- GitHub Pages:
-  1. 新しいリポジトリを作成して push。
-  2. 設定 -> Pages でブランチ (main) と root を選択して公開。
-- Vercel / Netlify:
-  1. GitHub と連携してデプロイ。CI により自動デプロイ可能。
+使い方
+1. このファイル群をリポジトリのルートに配置（index.html, styles.css, script.js, projects.json）。
+2. projects.json の meta と projects をあなたの内容に書き換える。
+3. contact form の action を Formspree ID（または mailto）に変更する。
+4. GitHub に push → Netlify / Vercel / GitHub Pages にデプロイ。
 
 カスタマイズ案
-- カラー、フォント、レイアウトを変更。
-- 各プロジェクトの詳細ページを HTML で作成してモーダル表示にする。
-- フォーム送信を有効にしたい場合は Formspree 等のサービスを利用。
+- プロジェクト詳細を Markdown で管理したければ、script.js を修正して Markdown を fetch→marked.js などで変換してください（marked の導入が必要）。
+- OGP 画像は head の meta og:image を差し替えてください。
+- スタイルを変えたい場合は styles.css のカラーパレット部分（:root）を調整してください。
 
-チェックリスト（公開前）
-- [ ] Email / GitHub リンクの更新
-- [ ] 主要プロジェクト 3 件以上を用意（可能ならソース or デモを添付）
-- [ ] 連絡可能時間や稼働時間の明記
-- [ ] プロフィール写真（任意）と短い自己紹介文
-- [ ] ライセンス・著作権（会社案件のソースは公開不可な場合あり）
-
-次のステップ（私からの提案）
-- あなたのスキルセットを教えてください（言語・フレームワーク・得意分野）。
-- 公開したいプロジェクトを 1〜3 件教えてください。こちらで各プロジェクトの「改善した説明文（ケーススタディ化）」と index.html に入れる短い抜粋文を作ります。
-- デプロイ（GitHub Pages / Vercel / Netlify）の手順を画像付きで詳しく案内します。
-
-必要なら、Next.js / Gatsby 等を使ったより洗練されたポートフォリオ一式（レスポンシブ・SEO・OGP対応）も作成します（要望を教えてください）。
+次のステップ（私ができること）
+- あなたの名前・自己紹介・スキル・各プロジェクトの具体情報を教えていただければ、projects.json と index.html のテキストをこちらで編集して差し上げます。
+- 「このデザインをそのまま Netlify にデプロイする手順」を画像付きで案内します。
+```
