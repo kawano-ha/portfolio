@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ポートフォリオ | あなたの名前</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">あなたの名前</h1>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>学生プログラマ / SE</h2>
+      <p>Web アプリケーション開発、スクレイピング、運用保守などに対応します。週に作業できる時間: <strong>例: 10〜15h</strong></p>
+      <p class="cta"><a href="#contact" class="button">依頼・相談する</a></p>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <!-- プロジェクトはここに増やしてください。下はサンプル。 -->
+        <article class="project-card">
+          <h4>スクレイピング自動化ツール</h4>
+          <p>Python + BeautifulSoup / データをCSVで出力。定期実行(cron)対応。</p>
+          <p class="meta">役割: 開発・テスト • 期間: 2週間</p>
+          <p><a href="projects/sample-project-1.md" class="button small">詳細を見る</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3>About / スキル</h3>
+      <ul class="skills">
+        <li>言語: JavaScript, Python, Ruby（例）</li>
+        <li>フレームワーク: React, Flask, Rails（例）</li>
+        <li>ツール: Git, Docker, CI（例）</li>
+      </ul>
+      <p>学業との両立をしながら実務での経験を積んでいます。スピード感と丁寧なコミュニケーションを重視します。</p>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>依頼・質問は下記からお願いします。</p>
+      <ul>
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
+        <li>CrowdWorks: <em>（任意）</em></li>
+      </ul>
+      <p class="note">プロジェクトの概要（目的・納期・予算）を添えていただけるとスムーズです。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> あなたの名前</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
