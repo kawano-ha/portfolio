@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "tagline": "React / Python / スクレイピング。短期案件・運用保守対応可。週 10h 程度。",
+    "about": "学生プログラマ。フロント〜バックまで一気通貫で作業できます。納期厳守と丁寧な報告を心がけています。",
+    "skills": ["JavaScript", "React", "Python", "Flask", "Git", "Docker"]
+  },
+  "projects": [
+    {
+      "id": "p1",
+      "title": "スクレイピング自動化ツール",
+      "short": "Python + BeautifulSoup で週次のデータ収集を自動化。CSV 出力／ログ付き。",
+      "role": "単独開発",
+      "period": "2024-06 (2 週間)",
+      "stack": ["Python", "BeautifulSoup", "pandas", "Docker"],
+      "description": "特定の EC サイトから商品情報を定期収集して CSV に出力、価格変動を監視する自動化ツールを構築。例外処理とリトライ、ログ出力を実装。",
+      "result": "手動作業を週 4 時間削減。将来的な対象サイト追加が容易な設計に。",
+      "github": "https://github.com/your-username/sample-scraper",
+      "demo": ""
+    },
+    {
+      "id": "p2",
+      "title": "タスク管理 Web アプリ (簡易)",
+      "short": "React + Flask のシンプルな Todo アプリ。ユーザ認証と API ベースの CRUD を実装。",
+      "role": "フロント / API 実装",
+      "period": "2024-03 (1 ヶ月)",
+      "stack": ["React", "Flask", "SQLite", "Docker"],
+      "description": "認証機能、タスク CRUD、フィルタリング、簡易カレンダー表示を実装。フロントは React、バックエンドは Flask の API を作成。",
+      "result": "学内のチームで日常タスク管理に導入。UI 改善でタスク完了率が向上。",
+      "github": "https://github.com/your-username/todo-app",
+      "demo": ""
+    },
+    {
+      "id": "p3",
+      "title": "コーポレートサイトのリニューアル（静的）",
+      "short": "HTML/CSS/JS でレスポンシブな会社サイトを作成。Netlify で公開。",
+      "role": "デザイン→実装",
+      "period": "2023-12 (2 週間)",
+      "stack": ["HTML", "CSS", "Vanilla JS", "Netlify"],
+      "description": "既存の旧式サイトをレスポンシブ化し、SEO メタの整理とパフォーマンス改善を実施。アクセシビリティの基礎チェックも実施。",
+      "result": "ページ読み込み速度改善とモバイルでの閲覧離脱率低下を確認。",
+      "github": "",
+      "demo": "https://example.com"
+    }
+  ]
+}

@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ポートフォリオ | あなたの名前</title>
+  <title>ポートフォリオ | TODO: あなたの名前</title>
+  <meta name="description" content="TODO: 学生プログラマのポートフォリオ。案件受付中。">
+  <meta property="og:title" content="TODO: あなたの名前 — ポートフォリオ">
+  <meta property="og:description" content="TODO: 学生プログラマのポートフォリオ。">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">あなたの名前</h1>
+    <div class="container header-inner">
+      <h1 class="logo">TODO: あなたの名前</h1>
       <nav class="nav">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -18,53 +22,67 @@
     </div>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
-      <h2>学生プログラマ / SE</h2>
-      <p>Web アプリケーション開発、スクレイピング、運用保守などに対応します。週に作業できる時間: <strong>例: 10〜15h</strong></p>
-      <p class="cta"><a href="#contact" class="button">依頼・相談する</a></p>
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <h2 class="hero-title">学生プログラマ / SE</h2>
+        <p id="hero-sub">React・Python・スクレイピング。短期案件対応可。週 10h 〜</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">プロジェクトを見る</a>
+          <a href="#contact" class="btn outline">依頼する</a>
+        </div>
+      </div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
     </section>
 
-    <section id="projects">
-      <h3>Projects</h3>
-      <div class="projects-grid">
-        <!-- プロジェクトはここに増やしてください。下はサンプル。 -->
-        <article class="project-card">
-          <h4>スクレイピング自動化ツール</h4>
-          <p>Python + BeautifulSoup / データをCSVで出力。定期実行(cron)対応。</p>
-          <p class="meta">役割: 開発・テスト • 期間: 2週間</p>
-          <p><a href="projects/sample-project-1.md" class="button small">詳細を見る</a></p>
-        </article>
+    <section id="projects" class="section container">
+      <h3 class="section-title">Projects</h3>
+      <div id="projects-grid" class="projects-grid" aria-live="polite">
+        <!-- JavaScript がここにカードを生成します -->
       </div>
     </section>
 
-    <section id="about">
-      <h3>About / スキル</h3>
-      <ul class="skills">
-        <li>言語: JavaScript, Python, Ruby（例）</li>
-        <li>フレームワーク: React, Flask, Rails（例）</li>
-        <li>ツール: Git, Docker, CI（例）</li>
+    <section id="about" class="section container">
+      <h3 class="section-title">About / Skills</h3>
+      <p id="about-text">TODO: ここに自己紹介文（1〜3 行）を入れてください。</p>
+      <ul id="skills" class="skills">
+        <!-- JS で埋める -->
       </ul>
-      <p>学業との両立をしながら実務での経験を積んでいます。スピード感と丁寧なコミュニケーションを重視します。</p>
     </section>
 
-    <section id="contact">
-      <h3>Contact</h3>
-      <p>依頼・質問は下記からお願いします。</p>
-      <ul>
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
-        <li>CrowdWorks: <em>（任意）</em></li>
-      </ul>
-      <p class="note">プロジェクトの概要（目的・納期・予算）を添えていただけるとスムーズです。</p>
+    <section id="contact" class="section container">
+      <h3 class="section-title">Contact</h3>
+      <p>簡単な依頼内容（目的・納期・予算）を添えてご連絡ください。</p>
+      <form id="contact-form" action="https://formspree.io/f/xxxxx" method="POST">
+        <div class="form-grid">
+          <input name="name" placeholder="お名前（任意）" />
+          <input name="email" type="email" placeholder="your.email@example.com" required />
+          <input name="subject" placeholder="件名" />
+          <textarea name="message" rows="6" placeholder="依頼内容（目的・納期・予算）" required></textarea>
+          <button class="btn primary" type="submit">送信</button>
+        </div>
+      </form>
+      <p class="note">Email: <a href="mailto:your.email@example.com">your.email@example.com</a> ・ GitHub: <a href="https://github.com/your-username" target="_blank">your-username</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> あなたの名前</p>
+      <p>© <span id="year"></span> TODO: あなたの名前</p>
     </div>
   </footer>
+
+  <!-- プロジェクト詳細モーダル -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="閉じる">✕</button>
+      <h4 id="modal-title"></h4>
+      <p id="modal-meta" class="meta"></p>
+      <div id="modal-body"></div>
+      <p id="modal-links"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
